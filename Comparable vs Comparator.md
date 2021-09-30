@@ -71,7 +71,9 @@ Movies after sorting :
 @Override
 public int compareTo(Movie m)
 {
-	return this.year - m.year;
+	return this.year - m.year; //always beware :  comparison-by-subtraction "trick" is broken for general int
+	//to avoid stack overflow, do it as this way:
+	return (this.year < m.year) ? -1 : (this.year == m.year) ? 0 : 1;
 }
 ```
 ### Sort Order
@@ -82,3 +84,8 @@ In a word, natural ordering is a default total ordering for Comparable Interface
 #### Natural ordering:
   * For String(or Charater object), `Natural ordering` is `unicode values`.
   * For Integer, it is `ascending order`, like 1,2,3,4,...
+
+
+## When to use Comparable and Comparator
+>Use `Comparable` if you want to define a default (natural) ordering behaviour of the object in question, a common practice is to use a technical or natural (database?) identifier of the object for this.
+>Use `Comparator` if you want to define an external controllable ordering behaviour, this can override the default ordering behaviour.
