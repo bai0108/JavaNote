@@ -39,8 +39,15 @@ class Movie implements Comparable<Movie>
     // Used to sort movies by year
     public int compareTo(Movie m)
     {
-        return this.year - m.year;
+        return this.year.compareTo(m.year);
     }
   
 }
+```
+**Subtraction Pattern of ** `compareTO`
+``` java
+	public int compareTo(Movie m)
+    {
+        return this.year - m.year;
+    }
 ```
