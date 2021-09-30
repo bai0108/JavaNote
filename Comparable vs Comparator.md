@@ -87,5 +87,6 @@ In a word, natural ordering is a default total ordering for Comparable Interface
 
 
 ## When to use Comparable and Comparator
->Use `Comparable` if you want to define a default (natural) ordering behaviour of the object in question, a common practice is to use a technical or natural (database?) identifier of the object for this.
->Use `Comparator` if you want to define an external controllable ordering behaviour, this can override the default ordering behaviour.
+>Use `Comparable` if you want to define a **default** (natural) ordering behaviour of the object in question, a common practice is to use a technical or natural identifier of the object for this.
+
+>Use `Comparator` if you want to define an **external controllable** ordering behaviour, this can override the default ordering behaviour.
