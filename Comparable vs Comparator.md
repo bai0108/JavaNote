@@ -77,8 +77,8 @@ public int compareTo(Movie m)
 ### Sort Order
 >This interface imposes a `total ordering` on the objects of each class that implements it. This ordering is referred to as the class's `natural ordering`, and the class's compareTo method is referred to as its natural comparison method.
 
-In a word, natural ordering is a default total ordering.
+In a word, natural ordering is a default total ordering for Comparable Interface, if you don't change override the `compareTo()` function.
 
 #### Natural ordering:
-* For String(or Charater object), `Natural ordering` is `unicode values`.
-* For Integer, it is `ascending order` (1,2,3,4,...).
+  * For String(or Charater object), `Natural ordering` is `unicode values`.
+  * For Integer, it is `ascending order`, like 1,2,3,4,...
