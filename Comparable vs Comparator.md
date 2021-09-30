@@ -74,4 +74,11 @@ public int compareTo(Movie m)
 	return this.year - m.year;
 }
 ```
-### If we do not
+### Sort Order
+>This interface imposes a `total ordering` on the objects of each class that implements it. This ordering is referred to as the class's `natural ordering`, and the class's compareTo method is referred to as its natural comparison method.
+
+In a word, natural ordering is a default total ordering.
+
+#### Natural ordering:
+* For String(or Charater object), `Natural ordering` is `unicode values`.
+* For Integer, it is `ascending order` (1,2,3,4,...).
