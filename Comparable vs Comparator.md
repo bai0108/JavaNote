@@ -14,7 +14,7 @@ In mathematics, we call this a sign or a signum function:
    
    ![aaa](https://www.baeldung.com/wp-content/uploads/2021/02/2021-01-24-10_27_03-notation-What-does-sgn-mean_-Mathematics-Stack-Exchange.png)
 
-Example :
+#### Example :
 
 ``` java
 class Movie implements Comparable<Movie>
@@ -44,7 +44,8 @@ class Movie implements Comparable<Movie>
   
 }
 ```
-**Subtraction Pattern of ** `compareTO`
+
+#### Subtraction Pattern of `compareTO`
 ``` java
 	public int compareTo(Movie m)
     {
