@@ -37,18 +37,41 @@ class Movie implements Comparable<Movie>
     public int getYear()      {  return year;  }
     
     // Used to sort movies by year
+	@Override
     public int compareTo(Movie m)
     {
         return this.year.compareTo(m.year);
     }
   
 }
-```
 
+public class ComparableDemo {
+	public static void main(String[] args) {
+		List<Movie> list = Arrays.asList(
+			new Movie("Force Awakens", 8.3, 2015),
+			new Movie("Star Wars", 8.7, 1977),
+			new Movie("Empire Strikes Back", 8.8, 1980),
+			new Movie("Return of the Jedi", 8.4, 1983)
+		);
+		
+		Collections.sort(list);
+	}
+}
+```
+__Result:__
+```java
+Movies after sorting : 
+- 1977 Star Wars 8.7 
+- 1980 Empire Strikes Back 8.8 
+- 1983 Return of the Jedi 8.4 
+- 2015 Force Awakens 8.3 
+```
 #### Subtraction Pattern of `compareTO`
 ``` java
+	@Override
 	public int compareTo(Movie m)
     {
         return this.year - m.year;
     }
 ```
+### If we do not
